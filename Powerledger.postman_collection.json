@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "bfd2c10a-a040-496a-8794-569208ae5a9b",
+		"name": "Powerledger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12382585"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjY1OTk0NTg3LCJleHAiOjE2NjYwMzA1ODd9.5f5ff9KoSoskPM7gqIqHca6GHAYNfCw20D7us8t0Ghw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://20.212.171.61:8080/search",
+					"protocol": "http",
+					"host": [
+						"20",
+						"212",
+						"171",
+						"61"
+					],
+					"port": "8080",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "6001",
+							"disabled": true
+						},
+						{
+							"key": "end",
+							"value": "7000",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"user\",\r\n    \"password\": \"user\"\r\n}"
+				},
+				"url": {
+					"raw": "http://20.212.171.61:8080/login",
+					"protocol": "http",
+					"host": [
+						"20",
+						"212",
+						"171",
+						"61"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/addBattery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjY1OTQwNDc1LCJleHAiOjE2NjU5NzY0NzV9.7wQBoBXzB3kA2krHis3UHd4vEsdEt61I4_URxP5n-9g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"batteries\" : [\r\n        {\r\n            \"name\": \"battery4\",\r\n            \"postcode\": \"6010\",\r\n            \"capacity\": 170\r\n        },\r\n        \r\n        {\r\n            \"name\": \"battery5\",\r\n            \"postcode\": \"6010\",\r\n            \"capacity\": 170\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://20.212.171.61:8080/addBattery",
+					"protocol": "http",
+					"host": [
+						"20",
+						"212",
+						"171",
+						"61"
+					],
+					"port": "8080",
+					"path": [
+						"addBattery"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
